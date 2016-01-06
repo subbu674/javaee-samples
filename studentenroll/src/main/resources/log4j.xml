@@ -11,7 +11,8 @@
 	</appender>
 	
 	<appender name="StudentAppRFA" class="org.apache.log4j.RollingFileAppender">
-        <param name="file" value="F:\\applogs\\StudentEnroll.log" />
+        <!--<param name="file" value="F:\\applogs\\StudentEnroll.log" />-->
+        <param name="file" value="C:\\applogs\\StudentEnroll.log" />
         <param name="append" value="true" />
         <param name="threshold" value="debug" />
         <layout class="org.apache.log4j.PatternLayout">

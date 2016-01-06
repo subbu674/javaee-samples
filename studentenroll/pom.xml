@@ -13,11 +13,15 @@
 	<version>1.7-SNAPSHOT</version>
 	<name>StudentEnrollmentWithSpring Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	<parent>
+	<properties>
+		<studentenroll.context>/StudentEnrollmentWithSpring</studentenroll.context>
+		<studentenroll.tomcat.port.http>8080</studentenroll.tomcat.port.http>
+	</properties>
+<!--	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
-	</parent>
+	</parent>-->
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -109,6 +113,50 @@
 		<finalName>StudentEnrollmentWithSpring</finalName>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<configuration>
+						<path>${studentenroll.context}</path>
+						<port>${studentenroll.tomcat.port.http}</port>
+						<!--<path>${studentenroll.context}</path>
+						<port>${studentenroll.tomcat.port.http}</port>-->
+						<!--<contextFile>${project.build.directory}/tomcatconf/context.xml</contextFile>-->
+					</configuration>
+				   <!-- <dependencies>
+						<dependency>
+							<groupId>org.apache.activemq</groupId>
+							<artifactId>activemq-all</artifactId>
+							<version>${org.apache.activemq.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.activemq</groupId>
+							<artifactId>activemq-pool</artifactId>
+							<version>${org.apache.activemq.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.camel</groupId>
+							<artifactId>camel-core</artifactId>
+							<version>${org.apache.camel.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.camel</groupId>
+							<artifactId>camel-jms</artifactId>
+							<version>${org.apache.camel.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>commons-pool</groupId>
+							<artifactId>commons-pool</artifactId>
+							<version>1.6</version>
+						</dependency>
+						&lt;!&ndash; Include JDBC driver dependency &ndash;&gt;
+						<dependency>
+							<groupId>${epdb.maven.groupId}</groupId>
+							<artifactId>${epdb.maven.artifactId}</artifactId>
+							<version>${epdb.maven.version}</version>
+						</dependency>
+					</dependencies>-->
+				</plugin>
 				<!-- <plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>

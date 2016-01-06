@@ -10,7 +10,7 @@
 
 	<modules>
 		<module>calc-app</module>
-		<module>jsp-demo</module>
+		<!--<module>jsp-demo</module>-->
 		<module>petclinic</module>
 		<module>studentenroll</module>
 	</modules>
