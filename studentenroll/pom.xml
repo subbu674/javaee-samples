@@ -14,7 +14,7 @@
 	<name>StudentEnrollmentWithSpring Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<studentenroll.context>/StudentEnrollmentWithSpring</studentenroll.context>
+		<studentenroll.context>/studentenroll</studentenroll.context>
 		<studentenroll.tomcat.port.http>8080</studentenroll.tomcat.port.http>
 	</properties>
 <!--	<parent>
